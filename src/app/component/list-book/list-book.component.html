@@ -1,0 +1,38 @@
+<div id="hihihii">
+  <a class=" btn btn-danger" [routerLink]="['/create']" > Create</a>
+</div>
+<div class="hiihi">
+  <div class="row">
+    <div class="col-1">
+    </div>
+    <div class="col-1">
+    </div>
+    <div class="col-8">
+      <table class="table">
+        <thead class="table-dark">
+        <tr>
+          <th class="hi">Số thứ tự</th>
+          <th>Name</th>
+          <th>Tác giả</th>
+          <th>Mô tả</th>
+          <th>Sửa</th>
+          <th>Xóa</th>
+          <th>Xem chi tiết</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let b of book ; index as i">
+        <tr>
+          <td>{{i + 1}}</td>
+          <td>{{b.title}}</td>
+          <td>{{b.author}}</td>
+          <td>{{b.description}}</td>
+          <td><a class="btn btn-warning" [routerLink]="['/edit',b.id]"> Edit</a></td>
+          <td><a class=" btn btn-info" (click)="delete(b.id)"> Delete</a></td>
+          <td><a class=" btn btn-success" routerLink="detail"> Detail</a></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-2"></div>
+  </div>
+</div>

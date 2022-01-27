@@ -1,0 +1,26 @@
+<div>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <h1>Sửa</h1>
+      <form [formGroup]="form" (ngSubmit)="update()">
+        <table>
+          <tr>
+            <td>tiêu đề</td>
+            <td><input type="text" formControlName="title" value="{{book.title}}" ></td>
+          </tr>
+          <tr>
+            <td>Tác giả</td>
+            <td><input type="text" formControlName="author" value="{{book.author}}" ></td>
+          </tr>
+          <tr>
+            <td>Mô tả</td>
+            <td><input type="text" formControlName="description" value="{{book.description}}" ></td>
+          </tr>
+        </table>
+        <button class="btn bg-primary" >Sửa</button>
+      </form>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>>

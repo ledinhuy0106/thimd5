@@ -1,0 +1,29 @@
+<div>
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+      <h1>Tạo sản phẩm mới</h1>
+      <form [formGroup]="form" (ngSubmit)="create()">
+        <table>
+          <tr>
+            <td></td>
+            <td><input  type="hidden" formControlName="title"></td>
+          </tr>
+          <tr>
+            <td>Tên sản phẩm:</td>
+            <td><input type="text" formControlName="author"></td>
+          </tr>
+          <tr>
+            <td>Tên sản phẩm:</td>
+            <td><input type="text" formControlName="author"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><button class="btn bg-gradient bg-primary">Tạo mới</button></td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <div class="col-3"></div>
+  </div>
+</div>
